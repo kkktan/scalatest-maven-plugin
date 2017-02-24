@@ -2,12 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
-
   <groupId>com.expedia</groupId>
   <artifactId>scalatest-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
@@ -33,13 +27,7 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
-  <scm>
-    <url>https://github.com/scalatest/scalatest-maven-plugin</url>
-    <connection>scm:git:git@github.com:scalatest/scalatest-maven-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:scalatest/scalatest-maven-plugin.git</developerConnection>
-  </scm>
-
+  
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
@@ -199,4 +187,27 @@
       </build>
     </profile>
   </profiles>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>snapshots</id>
+      <name>expedia-snapshots</name>
+      <url>http://nexuslab.alm/nexus/content/repositories/snapshots/</url>
+      <layout>default</layout>
+    </snapshotRepository>
+    <repository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>releases</id>
+      <name>expedia-releases</name>
+      <url>http://nexuslab.alm/nexus/content/repositories/releases/</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <url>https://github.com/kkktan/scalatest-maven-plugin</url>
+    <connection>scm:git:git@github.com:kkktan/scalatest-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:kkktan/scalatest-maven-plugin.git</developerConnection>
+  </scm>
+
 </project>
