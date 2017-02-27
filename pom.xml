@@ -27,7 +27,7 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  
+
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
